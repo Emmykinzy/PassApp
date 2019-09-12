@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PassApp.Models.PassWord>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PassWordKey)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassWordValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassWordKey)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassWordValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PassWordID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PassWordID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PassWordID })
+        </td>
+    </tr>
+}
+
+</table>

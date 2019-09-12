@@ -1,0 +1,42 @@
+﻿@model PassApp.Models.PassWord
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PassWord</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PassWordKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassWordKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassWordValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassWordValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PassWordID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
